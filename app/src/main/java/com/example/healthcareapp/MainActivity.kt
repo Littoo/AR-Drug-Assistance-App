@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.fragment.app.commit
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,6 +24,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.example.healthcareapp.databinding.ActivityMainBinding
+import com.example.healthcareapp.fragments.ARFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -53,7 +55,11 @@ class MainActivity : AppCompatActivity() {
             .build()
         mGoogleSignInClient= GoogleSignIn.getClient(this,gso)
 
-        binding.getButton.setOnClickListener { loadData() }
+//        binding.getButton.setOnClickListener { loadData() }
+
+        supportFragmentManager.commit {
+            add(R.id.containerFragment, ARFragment::class.java, Bundle())
+        }
 
     }
 
@@ -93,22 +99,22 @@ class MainActivity : AppCompatActivity() {
 //        }
 //    }
 
-    fun loadData(){
-        drugInfoInitViewModel = ViewModelProvider(this).get(DrugInformationViewModel::class.java)
-        drugInfoInitViewModel.getApiData()
-        drugInfoInitViewModel.OpenFDAData.observe(this, Observer {
-            initAdapter(it)
-        })
-    }
-
-    fun initAdapter(data: OpenFDAResponse){
-        val rvDrugInfo = findViewById<RecyclerView>(R.id.recyclerVi)
-        rvDrugInfo.layoutManager = LinearLayoutManager(this)
-        // This will pass the ArrayList to our Adapter
-        val adapter = DrugInformationAdapter(data)
-        // Setting the Adapter with the recyclerview
-        rvDrugInfo.adapter = adapter
-    }
+//    fun loadData(){
+//        drugInfoInitViewModel = ViewModelProvider(this).get(DrugInformationViewModel::class.java)
+//        drugInfoInitViewModel.getApiData()
+//        drugInfoInitViewModel.OpenFDAData.observe(this, Observer {
+//            initAdapter(it)
+//        })
+//    }
+//
+//    fun initAdapter(data: OpenFDAResponse){
+//        val rvDrugInfo = findViewById<RecyclerView>(R.id.recyclerVi)
+//        rvDrugInfo.layoutManager = LinearLayoutManager(this)
+//        // This will pass the ArrayList to our Adapter
+//        val adapter = DrugInformationAdapter(data)
+//        // Setting the Adapter with the recyclerview
+//        rvDrugInfo.adapter = adapter
+//    }
 
     private fun updateUI(user: FirebaseUser?, logoutIntent: Intent) {
         if (user != null) {

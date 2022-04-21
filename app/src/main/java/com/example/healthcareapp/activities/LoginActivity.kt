@@ -1,10 +1,12 @@
 package com.example.healthcareapp.activities
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.healthcareapp.MainActivity
 import com.example.healthcareapp.R
@@ -29,6 +31,12 @@ class LoginActivity: AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
 
+    var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            // There are no request codes
+            val data: Intent? = result.data
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +53,8 @@ class LoginActivity: AppCompatActivity() {
         var client: GoogleSignInClient = GoogleSignIn.getClient(this, gso)
         buttonSignIn.setOnClickListener{
             val signInIntent =  client.signInIntent
-            startActivityForResult(signInIntent, RC_GOOGLE_SIGN_IN)
+//            startActivityForResult(signInIntent, RC_GOOGLE_SIGN_IN)
+            resultLauncher.launch(signInIntent)
         }
     }
 
