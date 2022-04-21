@@ -10,9 +10,13 @@ import com.example.healthcareapp.R
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.ar.core.Anchor
 import io.github.sceneview.ar.ArSceneView
+import io.github.sceneview.ar.localPosition
+import io.github.sceneview.ar.localScale
 import io.github.sceneview.ar.node.ArModelNode
 import io.github.sceneview.ar.node.CursorNode
 import io.github.sceneview.math.Position
+import io.github.sceneview.math.Scale
+import io.github.sceneview.node.ViewNode
 import io.github.sceneview.utils.doOnApplyWindowInsets
 
 class ARFragment: Fragment(R.layout.ar_fragment) {
@@ -23,6 +27,7 @@ class ARFragment: Fragment(R.layout.ar_fragment) {
 
     lateinit var cursorNode: CursorNode
     lateinit var modelNode: ArModelNode
+    lateinit var viewNode: ViewNode
 
 
     var isLoading = false
@@ -73,6 +78,17 @@ class ARFragment: Fragment(R.layout.ar_fragment) {
         sceneView.addChild(cursorNode)
 
 //        isLoading = true
+
+        viewNode = ViewNode(
+            position = Position(0.0f, 1f, 0.0f),
+            scale = Scale(0.7f)
+        )
+        viewNode.loadView(
+            context = requireContext(),
+            lifecycle = lifecycle,
+            layoutResId = R.layout.view_renderable_infos
+        )
+
         modelNode = ArModelNode()
         modelNode.loadModelAsync(context = requireContext(),
             lifecycle = lifecycle,
@@ -82,6 +98,7 @@ class ARFragment: Fragment(R.layout.ar_fragment) {
                 actionButton.text = getString(R.string.move_object)
                 actionButton.setIconResource(R.drawable.ic_target)
                 isLoading = false
+
             })
 
 
@@ -90,7 +107,9 @@ class ARFragment: Fragment(R.layout.ar_fragment) {
 
     fun anchorOrMove(anchor: Anchor) {
         if (!sceneView.children.contains(modelNode)) {
-            sceneView.addChild(modelNode)
+            sceneView.addChild(modelNode).apply {
+                addChild(viewNode)
+            }
         }
         modelNode.anchor = anchor
     }
