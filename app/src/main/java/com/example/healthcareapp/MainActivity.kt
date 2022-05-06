@@ -6,16 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import androidx.fragment.app.commit
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.healthcareapp.activities.LoginActivity
-import com.example.healthcareapp.adapter.DrugInformationAdapter
-import com.example.healthcareapp.models.drugs.OpenFDAResponse
-import com.example.healthcareapp.viewmodel.DrugInformationViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -38,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var mGoogleSignInClient: GoogleSignInClient
 
     private lateinit var auth: FirebaseAuth
-    lateinit var drugInfoInitViewModel: DrugInformationViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +38,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 //        maybeEnableArButton()
-
         auth = Firebase.auth
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -61,11 +52,6 @@ class MainActivity : AppCompatActivity() {
             add(R.id.containerFragment, ARFragment::class.java, Bundle())
         }
 
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_profile, menu )
-        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
