@@ -10,4 +10,4 @@ Database: SQLite and Firebase
 ## Application Sections
 
 
-![Login Page](https://user-images.githubusercontent.com/80081180/177368921-02a832c2-23b9-4a58-8f04-99abcf12e6f4.jpg)
+<img src="[relative/path/in/repository/to/image.svg](https://user-images.githubusercontent.com/80081180/177368921-02a832c2-23b9-4a58-8f04-99abcf12e6f4.jpg)" width="128"/>
