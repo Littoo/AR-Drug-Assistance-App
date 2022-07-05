@@ -9,4 +9,5 @@ class DrugModel (
     val indication: String = "",
     val precaution: String = "",
     val storage: String = "",
-    )
+    ) {
+}

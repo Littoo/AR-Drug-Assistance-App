@@ -8,5 +8,21 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#bc214b</color>
+<!--    <color name="colorPrimary2">#1648CE</color>-->
+<!--    //APP PALETTE-->
+    <color name="colorPrimary1">#202596</color>
+    <color name="colorPrimary2">#8D91C7</color>
+    <color name="colorPrimary3">#B0DAF1</color>
+    <color name="Button1">#393A10</color>
+    <color name="Button2">#FFBE0B</color>
+    <color name="Button2_1">#FFD35C</color>
+
+    <color name="reminder_date_text_color">#F0F757</color>
+
+
+
+    <color name="homebutton">#EDECF4</color>
+
+    <color name="application_background">#EDEDEF</color>
 
 </resources>

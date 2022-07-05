@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="login">
+
+        <item name="android:textSize">
+            32sp
+        </item>
+
+        <item name="android:letterSpacing">
+            -0.03
+        </item>
+
+        <item name="android:textColor">
+            #432C81
+        </item>
+
+    </style>
+    <style name="welcome_bac">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:letterSpacing">
+            -0.03
+        </item>
+
+        <item name="android:textColor">
+            #432C81
+        </item>
+
+    </style>
+
+    <!--    //for Switch in Create Reminder-->
+    <style name="Widget.App.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Switch" parent="">
+        <item name="colorOnSurface">@color/colorPrimary3</item>
+        <item name="colorSecondary">@color/Button2</item>
+    </style>
+
+    <!--    //for Extended Floating Action Button in Reminder-->
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100dp</item>
+    </style>
+
+    <style name="Widget.App.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearance.App.SmallComponent
+        </item>
+    </style>
+
+    <style name="ThemeOverlay.App.FloatingActionButton" parent="">
+        <item name="colorSecondary">@color/Button2</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSurface">@color/Button2_1</item>
+    </style>
+
+
+    <!-- For Reminder Item     -->
+    <style name="Widget.App.ReminderCardView" parent="Widget.MaterialComponents.CardView">
+<!--        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Card</item>-->
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+        <item name="cardBackgroundColor">@style/ThemeOverlay.App.Card</item>
+
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Card" parent="">
+        <item name="colorPrimary">@color/colorPrimary1</item>
+        <item name="colorOnPrimary">@color/white</item>
+<!--        <item name="colorPrimary">@color/shrine_pink_100</item>-->
+<!--        <item name="colorSurface">@color/shrine_pink_light</item>-->
+<!--        <item name="colorOnSurface">@color/shrine_pink_900</item>-->
+    </style>
+
+</resources>

@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".activities.LoginActivity">
 
 
     <RelativeLayout
         android:id="@+id/title_lines"
-        android:layout_width="0dp"
-        android:layout_height="72dp"
-        android:layout_alignParentLeft="true"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/title_lines"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,12 +23,16 @@
 
         <TextView
             android:id="@+id/welcome_bac"
-            android:layout_width="327dp"
-            android:layout_height="26dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
+            android:autoSizeMaxTextSize="32sp"
+            android:autoSizeMinTextSize="20sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="center_horizontal|top"
             android:lineSpacingExtra="3sp"
             android:text="@string/login_title1"
@@ -37,13 +41,18 @@
 
         <TextView
             android:id="@+id/login"
-            android:layout_width="327dp"
-            android:layout_height="42dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcome_bac"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="0dp"
             android:layout_marginEnd="24dp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeMinTextSize="30sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="center_horizontal|top"
             android:lineSpacingExtra="4sp"
             android:text="@string/login_title2"
@@ -54,35 +63,35 @@
 
     <ImageView
         android:id="@+id/handPhone"
-        android:layout_width="417dp"
-        android:layout_height="490dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="345dp"
+        android:layout_height="415dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_lines"
         app:srcCompat="@drawable/hand_phone" />
 
     <ImageView
         android:id="@+id/drugPill"
-        android:layout_width="126dp"
-        android:layout_height="233dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="176dp"
+        android:layout_width="104dp"
+        android:layout_height="202dp"
+        android:layout_marginTop="116dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_lines"
         app:srcCompat="@drawable/drug_pills" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/buttonSignIn"
-        android:layout_width="327dp"
+        android:layout_width="150dp"
         android:layout_height="42dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="670dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="88dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/handPhone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
