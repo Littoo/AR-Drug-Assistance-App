@@ -7,9 +7,17 @@ Framework: Kotlin Android\
 ARCore Package: [Sceneview](https://github.com/SceneView/sceneview-android)\
 Database: SQLite and Firebase
 
-## Application AR Features
+## AR Features
 
 <p align="center" width="100%">
   <img src="https://user-images.githubusercontent.com/80081180/177371074-f5bfa9b2-dded-4171-8b6c-e779131661b0.jpg" width="256"/>
   <img src="https://user-images.githubusercontent.com/80081180/177371035-475cc41e-e1ba-41d0-b4b1-743025710c4a.jpg" width="256"/>
+</p>
+
+## Reminder Features
+
+<p align="center" width="100%">
+  <img src="https://user-images.githubusercontent.com/80081180/177371513-17e8578b-9cc1-41a4-a27e-c3db0106375c.jpg" width="256"/>
+  <img src="https://user-images.githubusercontent.com/80081180/177371729-74c11208-756f-414f-8903-791347b9d8de.jpg" width="256"/>
+  <img src="https://user-images.githubusercontent.com/80081180/177371746-aa6009e4-bded-42a4-865d-89c95c4bc0a9.jpg" width="256"/>
 </p>
