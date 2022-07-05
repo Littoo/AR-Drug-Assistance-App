@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2020 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/camera_container"
+    android:background="@android:color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CameraActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/view_finder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imageFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imagePredicted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:cropToPadding="false"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:foregroundGravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintLeft_toLeftOf="@+id/imageFrame"
+            app:layout_constraintRight_toRightOf="@+id/imageFrame"
+            app:layout_constraintTop_toTopOf="@+id/imageFrame" />
+
+        <TextView
+            android:id="@+id/detectObject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Detected Object:"
+            android:visibility="gone"
+            app:autoSizeMaxTextSize="26sp"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="@+id/imageFrame"
+            app:layout_constraintStart_toStartOf="@+id/imageFrame"
+            app:layout_constraintTop_toBottomOf="@+id/imagePredicted" />
+
+        <TextView
+            android:id="@+id/objectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="None"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:autoSizeMaxTextSize="36sp"
+            app:autoSizeMinTextSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageFrame"
+            app:layout_constraintStart_toStartOf="@+id/imageFrame"
+            app:layout_constraintTop_toBottomOf="@+id/detectObject" />
+
+        <Button
+            android:id="@+id/reCaptureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/capture_again"
+            android:text="@string/recapture"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageFrame"
+            app:layout_constraintEnd_toEndOf="@+id/imageFrame"
+            app:layout_constraintStart_toStartOf="@+id/imageFrame"
+            app:layout_constraintTop_toBottomOf="@+id/objectName"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/proceedARButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/capture_again"
+            android:text="@string/display_info"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageFrame"
+            app:layout_constraintEnd_toEndOf="@+id/imageFrame"
+            app:layout_constraintStart_toStartOf="@+id/imageFrame"
+            app:layout_constraintTop_toBottomOf="@+id/reCaptureButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ImageButton
+        android:id="@+id/camera_capture_button"
+        android:layout_width="@dimen/round_button_large"
+        android:layout_height="@dimen/round_button_large"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/ic_shutter"
+        android:contentDescription="@string/capture_button_alt"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

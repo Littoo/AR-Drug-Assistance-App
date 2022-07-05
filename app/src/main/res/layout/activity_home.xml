@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:id="@+id/title_user_"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="17dp"
+            android:background="@drawable/home_header"
+            tools:layout_editor_absoluteX="-124dp"
+            tools:layout_editor_absoluteY="354dp">
+
+            <TextView
+                android:id="@+id/hi_greeting"
+                android:layout_width="281dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="62dp"
+                android:height="19.5sp"
+                android:autoSizeMaxTextSize="32sp"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/roboto"
+                android:gravity="top"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/hi_greeting"
+                android:translationY="-1.91sp" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="281dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/hi_greeting"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="55dp"
+                android:layout_marginBottom="5dp"
+                android:height="19.5sp"
+                android:autoSizeMaxTextSize="35sp"
+                android:autoSizeMinTextSize="30sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="top"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/user_name"
+                android:textStyle="bold"
+                android:translationY="-1.91sp" />
+
+            <ImageView
+                android:layout_width="93dp"
+                android:layout_height="84dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/doctor_sitting" />
+
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_button_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="50dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/home_button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:autoSizeMaxTextSize="24sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeTextType="uniform"
+                android:text="@string/home_button1"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/roboto"
+                android:textAllCaps="false"
+                app:cornerRadius="15dp"
+                app:icon="@drawable/pillbox"
+                app:iconGravity="end"
+                app:iconSize="30dp"
+                app:iconTint="@null"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageView"-->
+            <!--                android:layout_width="30dp"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:layout_alignParentTop="true"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:layout_alignParentBottom="true"-->
+            <!--                android:layout_marginTop="25dp"-->
+            <!--                android:layout_marginEnd="25dp"-->
+            <!--                android:layout_marginBottom="25dp"-->
+            <!--                android:contentDescription="@string/home_button1_image"-->
+            <!--                android:translationZ="5dp"-->
+            <!--                app:srcCompat="@drawable/pillbox" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="225dp"
+            android:layout_marginEnd="50dp"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/home_button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:autoSizeMaxTextSize="24sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeTextType="uniform"
+                android:textAllCaps="false"
+
+                android:text="@string/home_button2"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/roboto"
+                app:cornerRadius="15dp"
+                app:icon="@drawable/calendar_icon"
+                app:iconGravity="end"
+                app:iconSize="30dp"
+                app:iconTint="@null"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageView2"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentTop="true"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:layout_alignParentBottom="true"-->
+            <!--                android:adjustViewBounds="true"-->
+            <!--                android:contentDescription="@string/home_button2_image"-->
+            <!--                android:scaleType="fitCenter"-->
+            <!--                android:translationZ="5dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@id/home_button2"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                app:srcCompat="@drawable/calendar_icon" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

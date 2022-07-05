@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">HealthCareApp</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="place_object">Place</string>
+    <string name="move_object">Remove</string>
+    <string name="drug_name">%1$s</string>
+    <string name="login_title1">Welcome to</string>
+    <string name="login_title2">TambAR</string>
+    <string name="hi_greeting">Good Day, </string>
+    <string name="user_name">Juan! </string>
+    <string name="home_button1">Identify Drug</string>
+    <string name="home_button2">Reminder</string>
+    <string name="home_button1_image">Pillbox</string>
+    <string name="home_button2_image">Calendar</string>
+
+<!--    //for Camera Activity Layout-->
+    <string name="recapture">Retake Photo</string>
+    <string name="display_info">Show Prescribing Info</string>
+    <string name="capture_button_alt">Capture</string>
+    <string name="unknown">UNKNOWN</string>
+
+<!--    //for ARFragment Layout-->
+    <string name="label_dropdown">Prescribing Info</string>
+
+<!--    //for Create Reminder Layout-->
+    <string name="daily">Daily</string>
+    <string name="create_new_reminder">+ New</string>
+
+<!--    //for Notification-->
+    <string name="notification_title">Medication Time!</string>
+    <string name="notificaiton_time">Time : %1$s</string>
+    <string name="notificaiton_label">Goal : %1$s</string>
+
+<!--//for view renderable notes info -->
+<!--    NOTE!!! To make the html format work, transform '<' (Open bracket) to "&lt;" -->
+    <string name="presc_notes_render_content">
+        &lt;p>&lt;strong>Goal &lt;/strong>: &lt;br />
+        %1$s&lt;br />
+        &lt;br />
+        &lt;strong>Time&lt;/strong> : &lt;br />
+        %2$s&lt;br />
+        &lt;br />
+        &lt;strong>Instructions/Notes&lt;/strong> : &lt;br />
+        %3$s&lt;/p>
+    </string>
+
+
+</resources>
