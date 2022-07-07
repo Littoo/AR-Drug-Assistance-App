@@ -5,7 +5,7 @@ The AR Medical Drug Assistance system facilitates and manages the medication sch
 ## Tech Stack
 Framework: Kotlin Android\
 ARCore Package: [Sceneview](https://github.com/SceneView/sceneview-android)\
-Database: SQLite and Firebase
+Database: SQLite(ROOM) and Firestore
 
 ## AR Features
 
